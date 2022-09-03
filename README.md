@@ -1,1 +1,1 @@
-# SSD offical will complete later
+# SSD official will complete later
