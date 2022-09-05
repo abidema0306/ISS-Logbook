@@ -44,7 +44,7 @@
 
 ## 7.2 Pylint
 
-## 7.3 Mccabe (Cyclomatic Compplexity)
+## 7.3 McCabe (Cyclomatic Compplexity)
 
 -------------------------------------------------------------
 
