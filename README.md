@@ -95,6 +95,7 @@ Password validation should have many paramaters which included complexity, lengt
 
 ------------------------------------------------------------
 
+
 ## 9 References
 
 Ashmore, J. Adelajun, A. Tolofari, S. (2022) 'Development Team Project: Design Document'. Paper submitted to the university of the University of Essex Online for Secure Software Development Module.
