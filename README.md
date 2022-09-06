@@ -2,7 +2,7 @@
 -------------------------------------------------------------
 ## 1.1 Assignment brief
 
-This project aims to desing a secure application that helps ESA astronnauts on the International Space station to record sensitive research information inline with OWASP'S main security threats (OWASP, 2021) as outlined in our Design document.
+This project aims to desing a secure application that helps ESA astronnauts on the International Space station to record sensitive research information inline with OWASP'S main security threats (OWASP, 2021) as outlined in our Design document (Ashmore et al, 2022).
 
 
 --------------------------------------------------------------
@@ -16,7 +16,6 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2.
 ------------------------------------------------------------
 
 ## 2 Passwords: hashing and salting
-
 
 
 --------------------------------------------------------------
@@ -83,6 +82,7 @@ Password validation should have many paramaters which included complexity, lengt
 
 ## 9 References
 
+Ashmore, J. Adelajun, A. Tolofari, S. (2022) 'Development Team Project: Design Document'. Paper submitted to the university of the University of Essex Online for Secure Software Development Module.
 Simplilearn.com. (2021) Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. Available from: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
 
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
