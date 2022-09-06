@@ -44,7 +44,7 @@ Password validation should have many paramaters which included complexity, lengt
 
 1. Email account already exists
 2. Email must be greater than 3 characters
-<img src="https://github.com/JonnyAsh/ISS-Logbook/blob/08d313228517d24fa5b1583276a711bc40114f4e/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png" width="450">
+<img src="https://github.com/JonnyAsh/ISS-Logbook/blob/08d313228517d24fa5b1583276a711bc40114f4e/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png" height="450" width="600">
 
 4. Passwords do not match
 5. If not any(char.islower() = password must have one the symbols $@#'
