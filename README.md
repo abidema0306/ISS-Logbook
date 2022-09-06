@@ -51,7 +51,7 @@ Password validation should have many paramaters which included complexity, lengt
             
 2.`elif len(email) < 10:
             flash('Email must be greater than 10 characters.', category='error')`
-![email len](https://github.com/JonnyAsh/ISS-Logbook/blob/08d313228517d24fa5b1583276a711bc40114f4e/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png)<br> <br/>
+![email len](https://github.com/JonnyAsh/ISS-Logbook/blob/7b7553cdd6981c21fb849315b82e619ae368fd8b/ISS%20Secure%20Logbook/website/images/email%20length.png)<br> <br/>
 
 3. `elif len(first_name) < 3:
             flash('First name must be greater than 1 character.', category='error')`
