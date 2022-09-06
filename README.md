@@ -70,7 +70,8 @@ Password validation should have many paramaters which included complexity, lengt
             flash('Password should have at least one lowercase letter', category='error')`
             ![lower](https://github.com/JonnyAsh/ISS-Logbook/blob/8d8116b70ab20a24a392a58528370470f5e03fd4/ISS%20Secure%20Logbook/website/images/lowercase.png)<br><br/>
 8. `elif not any(char in SpecialSym for char in password1 and password2):
-            flash('Password should have at least one of the symbols $@#', category='error')`<br><br/>
+            flash('Password should have at least one of the symbols $@#', category='error')`
+            ![symbol](https://github.com/JonnyAsh/ISS-Logbook/blob/a8e696ae2ca9295b103387f4c6265b1bade1c87c/ISS%20Secure%20Logbook/website/images/symbol.png)<br><br/>
             
 
 
