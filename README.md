@@ -14,6 +14,8 @@ This project aims to desing a secure application that helps ESA astronnauts on t
 
 ## 2 Passwords: hashing and salting
 
+
+
 --------------------------------------------------------------
 
 ## 3 Logbook Username, Password, notes database
@@ -38,6 +40,22 @@ This project aims to desing a secure application that helps ESA astronnauts on t
 
 ## 6.1 Password Validation
 
+Password validation should have many paramaters to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created. 
+
+1. Email account already exists
+2. Email must be greater than 3 characters
+3. Passwords do not match
+4. If not any(char.islower() = password must have one the symbols $@#'
+5. If len(password) < 8 = password must be eight or more characters
+6. If not any(char.isdigit() = password must have at least one numeral
+7. If not any(char.isupper() = password must have one uppercase letter
+8. If not any(char.islower() = password must have one lowercase letter
+
+
+
+
+Below are examples taken from the Logbook app. 
+
 ## 6.2 Multifactor Authentication
 
 ## 6.3 Captcha
@@ -59,6 +77,8 @@ This project aims to desing a secure application that helps ESA astronnauts on t
 ------------------------------------------------------------
 
 ## 9 References
+
+Simplilearn.com. (2021). Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. [online] Available at: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
 
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
 
