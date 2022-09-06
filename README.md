@@ -44,8 +44,10 @@ Password validation should have many paramaters to ensure account security (Simp
 
 1. Email account already exists
 3. Email must be greater than 3 characters
-![email len]([direct link to image](ISS Secure Logbook/website/images/EMAIL LEN.png)
-![email len warning](ISS Secure Logbook/website/images/email len 2.png)
+![email len]([direct link to image]([ISS Secure Logbook/website/images/EMAIL LEN.png](https://github.com/JonnyAsh/ISS-Logbook/blob/2532b7ccc1b36ae56545a5f08debb4fe5c355ea6/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png)
+
+![email len warning](https://github.com/JonnyAsh/ISS-Logbook/blob/2532b7ccc1b36ae56545a5f08debb4fe5c355ea6/ISS%20Secure%20Logbook/website/images/email%20len%202.png)
+
 5. Passwords do not match
 6. If not any(char.islower() = password must have one the symbols $@#'
 7. If len(password) < 8 = password must be eight or more characters
