@@ -44,11 +44,15 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2.
 
 Password validation should have many paramaters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created. Below are examples taken from the Logbook app. 
 
-1. `if user:
+1.`if user:
             flash('Email already exists.', category='error')`
-2. `elif len(email) < 10:
+            ![email exists](https://github.com/JonnyAsh/ISS-Logbook/blob/550988653b81f0a46e6179dba6b39aec2387a02c/ISS%20Secure%20Logbook/website/images/email%20exists.png)<br> <br/>  
+            
+            
+2.`elif len(email) < 10:
             flash('Email must be greater than 10 characters.', category='error')`
-![email len](https://github.com/JonnyAsh/ISS-Logbook/blob/08d313228517d24fa5b1583276a711bc40114f4e/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png)
+![email len](https://github.com/JonnyAsh/ISS-Logbook/blob/08d313228517d24fa5b1583276a711bc40114f4e/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png)<br> <br/>
+
 3. `elif len(first_name) < 3:
             flash('First name must be greater than 1 character.', category='error')`
 4. `elif password1 != password2:
