@@ -40,21 +40,23 @@ This project aims to desing a secure application that helps ESA astronnauts on t
 
 ## 6.1 Password Validation
 
-Password validation should have many paramaters to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created. 
+Password validation should have many paramaters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created. Below are examples taken from the Logbook app. 
 
 1. Email account already exists
 2. Email must be greater than 3 characters
-3. Passwords do not match
-4. If not any(char.islower() = password must have one the symbols $@#'
-5. If len(password) < 8 = password must be eight or more characters
-6. If not any(char.isdigit() = password must have at least one numeral
-7. If not any(char.isupper() = password must have one uppercase letter
-8. If not any(char.islower() = password must have one lowercase letter
+![email len](https://github.com/JonnyAsh/ISS-Logbook/blob/08d313228517d24fa5b1583276a711bc40114f4e/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png)
+
+4. Passwords do not match
+5. If not any(char.islower() = password must have one the symbols $@#'
+6. If len(password) < 8 = password must be eight or more characters
+7. If not any(char.isdigit() = password must have at least one numeral
+8. If not any(char.isupper() = password must have one uppercase letter
+9. If not any(char.islower() = password must have one lowercase letter
 
 
 
 
-Below are examples taken from the Logbook app. 
+
 
 ## 6.2 Multifactor Authentication
 
@@ -78,11 +80,11 @@ Below are examples taken from the Logbook app.
 
 ## 9 References
 
-Simplilearn.com. (2021). Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. [online] Available at: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
+Simplilearn.com. (2021) Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. Available from: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
 
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
 
-OWASP (2021). OWASP Top 10:2021. [online] owasp.org. Available at: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
+OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
 ‌
 ‌
 
