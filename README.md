@@ -66,7 +66,6 @@ Password validation should have many paramaters to ensure account security (Simp
 
 Simplilearn.com. (2021). Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. [online] Available at: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
 
-‌
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
 
 OWASP (2021). OWASP Top 10:2021. [online] owasp.org. Available at: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
