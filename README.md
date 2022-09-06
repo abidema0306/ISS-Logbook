@@ -46,7 +46,7 @@ Password validation should have many paramaters which included complexity, lengt
 
 1.`if user:
             flash('Email already exists.', category='error')`
-            ![email exists](https://github.com/JonnyAsh/ISS-Logbook/blob/550988653b81f0a46e6179dba6b39aec2387a02c/ISS%20Secure%20Logbook/website/images/email%20exists.png)<br> <br/>  
+            ![email exists](https://github.com/JonnyAsh/ISS-Logbook/blob/cad72aaad684b9f4fa6cbe8a218c557a0ff28a11/ISS%20Secure%20Logbook/website/images/email%20exists%20already.png)<br><br/>  
             
             
 2.`elif len(email) < 10:
