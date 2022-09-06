@@ -44,12 +44,13 @@ Password validation should have many paramaters which included complexity, lengt
 
 1. Email account already exists
 2. Email must be greater than 3 characters
-3. Passwords do not match
-4. If not any(char.islower() = password must have one the symbols $@#'
-5. If len(password) < 8 = password must be eight or more characters
-6. If not any(char.isdigit() = password must have at least one numeral
-7. If not any(char.isupper() = password must have one uppercase letter
-8. If not any(char.islower() = password must have one lowercase letter
+<img src="[https://github.com/favicon.ico](https://github.com/JonnyAsh/ISS-Logbook/blob/08d313228517d24fa5b1583276a711bc40114f4e/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png)" width="48">
+4. Passwords do not match
+5. If not any(char.islower() = password must have one the symbols $@#'
+6. If len(password) < 8 = password must be eight or more characters
+7. If not any(char.isdigit() = password must have at least one numeral
+8. If not any(char.isupper() = password must have one uppercase letter
+9. If not any(char.islower() = password must have one lowercase letter
 
 
 
