@@ -54,7 +54,6 @@ Password validation should have many paramaters to ensure account security (Simp
 
 
 
-
 Below are examples taken from the Logbook app. 
 
 ## 6.2 Multifactor Authentication
