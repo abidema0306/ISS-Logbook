@@ -65,16 +65,13 @@ Password validation should have many paramaters which included complexity, lengt
             
 6. `elif not any(char.isupper() for char in password1 and password2):
             flash ('Password should have at least one uppercase letter', category='error')'`
-            ![email len]()
+            ![upper](https://github.com/JonnyAsh/ISS-Logbook/blob/8d8116b70ab20a24a392a58528370470f5e03fd4/ISS%20Secure%20Logbook/website/images/uppercase.png)<br><br/>
 7. `elif not any(char.islower() for char in password1 and password2):
             flash('Password should have at least one lowercase letter', category='error')`
-            ![email len]()
+            ![lower](https://github.com/JonnyAsh/ISS-Logbook/blob/8d8116b70ab20a24a392a58528370470f5e03fd4/ISS%20Secure%20Logbook/website/images/lowercase.png)<br><br/>
 8. `elif not any(char in SpecialSym for char in password1 and password2):
-            flash('Password should have at least one of the symbols $@#', category='error')`
-            v
-9. `elif len(password1) < 8:
-            flash('Password must be at least 8 characters.', category='error')`
-            ![email len]()
+            flash('Password should have at least one of the symbols $@#', category='error')`<br><br/>
+            
 
 
 
