@@ -55,12 +55,13 @@ Password validation should have many paramaters which included complexity, lengt
 
 3. `elif len(first_name) < 3:
             flash('First name must be greater than 1 character.', category='error')`
-            ![email len](https://github.com/JonnyAsh/ISS-Logbook/blob/64bc7000f4fa5faa6763f6b2cbdfa9a37a03cc1d/ISS%20Secure%20Logbook/website/images/first%20name.png)<br><br/>
+            ![name greater than 1](https://github.com/JonnyAsh/ISS-Logbook/blob/64bc7000f4fa5faa6763f6b2cbdfa9a37a03cc1d/ISS%20Secure%20Logbook/website/images/first%20name.png)<br><br/>
 4. `elif password1 != password2:
             flash('Passwords don\'t match.', category='error')`
-            ![email len](https://github.com/JonnyAsh/ISS-Logbook/blob/15574e69f50f1906ed73e193a8b7e594f398354f/ISS%20Secure%20Logbook/website/images/password%20dont%20match.png)<br><br/>
+            ![password dont math](https://github.com/JonnyAsh/ISS-Logbook/blob/15574e69f50f1906ed73e193a8b7e594f398354f/ISS%20Secure%20Logbook/website/images/password%20dont%20match.png)<br><br/>
 5. `elif not any(char.isdigit() for char in password1 and password2):
             flash('Password1 should have at least one numeral', category='error')`
+           ![roman numeral](https://github.com/JonnyAsh/ISS-Logbook/blob/309eb8cf232a06acfed62d8ab5ff9bd630be2216/ISS%20Secure%20Logbook/website/images/one%20roman%20number.png)<br><br/>
             
 6. `elif not any(char.isupper() for char in password1 and password2):
             flash ('Password should have at least one uppercase letter', category='error')'`
