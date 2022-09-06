@@ -43,13 +43,15 @@ This project aims to desing a secure application that helps ESA astronnauts on t
 Password validation should have many paramaters to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created. 
 
 1. Email account already exists
-2. Email must be greater than 3 characters
-3. Passwords do not match
-4. If not any(char.islower() = password must have one the symbols $@#'
-5. If len(password) < 8 = password must be eight or more characters
-6. If not any(char.isdigit() = password must have at least one numeral
-7. If not any(char.isupper() = password must have one uppercase letter
-8. If not any(char.islower() = password must have one lowercase letter
+3. Email must be greater than 3 characters
+![email len]([direct link to image](ISS Secure Logbook/website/images/EMAIL LEN.png)
+![email len warning](ISS Secure Logbook/website/images/email len 2.png)
+5. Passwords do not match
+6. If not any(char.islower() = password must have one the symbols $@#'
+7. If len(password) < 8 = password must be eight or more characters
+8. If not any(char.isdigit() = password must have at least one numeral
+9. If not any(char.isupper() = password must have one uppercase letter
+10. If not any(char.islower() = password must have one lowercase letter
 
 
 
