@@ -44,16 +44,25 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2.
 
 Password validation should have many paramaters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created. Below are examples taken from the Logbook app. 
 
-1. Email account already exists
-2. Email must be greater than 3 characters
+1. `if user:
+            flash('Email already exists.', category='error')`
+2. `elif len(email) < 10:
+            flash('Email must be greater than 10 characters.', category='error')`
 ![email len](https://github.com/JonnyAsh/ISS-Logbook/blob/08d313228517d24fa5b1583276a711bc40114f4e/ISS%20Secure%20Logbook/website/images/EMAIL%20LEN.png)
-
-4. Passwords do not match
-5. If not any(char.islower() = password must have one the symbols $@#'
-6. If len(password) < 8 = password must be eight or more characters
-7. If not any(char.isdigit() = password must have at least one numeral
-8. If not any(char.isupper() = password must have one uppercase letter
-9. If not any(char.islower() = password must have one lowercase letter
+3. `elif len(first_name) < 3:
+            flash('First name must be greater than 1 character.', category='error')`
+4. `elif password1 != password2:
+            flash('Passwords don\'t match.', category='error')`
+5. `elif not any(char.isdigit() for char in password1 and password2):
+            flash('Password1 should have at least one numeral', category='error')`
+6. `elif not any(char.isupper() for char in password1 and password2):
+            flash ('Password should have at least one uppercase letter', category='error')'`
+7. `elif not any(char.islower() for char in password1 and password2):
+            flash('Password should have at least one lowercase letter', category='error')`
+8. `elif not any(char in SpecialSym for char in password1 and password2):
+            flash('Password should have at least one of the symbols $@#', category='error')` 
+9. `elif len(password1) < 8:
+            flash('Password must be at least 8 characters.', category='error')`
 
 
 
