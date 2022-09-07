@@ -13,6 +13,14 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2.
 -----------
 
 ## 1.3 Threats
+•	Injection Attacks. 
+•	Broken Authentication. 
+•	Cross-Sitete Scripting (XSS) 
+•	Insecure Direct Object References (IDOR) 
+•	Security Misconfigurations.  
+•	Unvalidated Redirects and Forwards. 
+•	Missing Function Level Access Control.
+
 ------------------------------------------------------------
 
 ## 2 Passwords: hashing and salting
