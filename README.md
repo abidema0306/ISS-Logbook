@@ -97,6 +97,8 @@ Password validation should have many paramaters which included complexity, lengt
 
 ## 7.3 McCabe (Cyclomatic Compplexity)
 
+## 7.4 Bandit
+
 -------------------------------------------------------------
 
 ## 8 Testing
