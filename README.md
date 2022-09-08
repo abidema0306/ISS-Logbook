@@ -13,6 +13,7 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2.
 -----------
 
 ## 1.3 Threats
+According to OWASP, these threats are identified in the development of this application, and appropriate mitigative action has been implemented.
 •	Injection Attacks. 
 •	Broken Authentication. 
 •	Cross-Sitete Scripting (XSS) 
