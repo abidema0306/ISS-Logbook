@@ -22,6 +22,11 @@ For this reason, a program was written in Python (Downey, 2009), which enforces 
 ------------------------------------------------------------
 
 ## 2 Passwords: hashing and salting
+        
+The program enforces the following password restrictions:             
+The password length must be between 8 and 64 characters. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (PythonPool, 2021).
+The password must contain special characters, numbers and upper-case letters.
+The password must contain at least one whitespace. Passwords with white spaces tend to be more secure (InfosecMatter, 2021).
 
 
 --------------------------------------------------------------
