@@ -13,14 +13,11 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2.
 -----------
 
 ## 1.3 Threats
-According to OWASP, these threats are identified in the development of this application, and appropriate mitigative action has been implemented.
-•	Injection Attacks. 
-•	Broken Authentication. 
-•	Cross-Sitete Scripting (XSS) 
-•	Insecure Direct Object References (IDOR) 
-•	Security Misconfigurations.  
-•	Unvalidated Redirects and Forwards. 
-•	Missing Function Level Access Control.
+
+In the design document, a few threats were identified applicable to the logbook. These threats included taking over an existing user’s account and upgrading a lesser privileged account to one with more privileges.
+For this reason, a program was written in Python (Downey, 2009), which enforces strong password practices, applies cryptographic hashing functions to protect this privileged data, locks the user accounts after too many incorrect login attempts, and separates user data from the more privileged staff data. The password must contain special characters, numbers and upper-case letters. The code will also require users to confirm their password to help them catch any typos. Passwords which meet all the requirements will then be hashed using the SHA-256 cryptographic hashing method and stored in the csv file together with the user’s email address, registration date and the number of login attempts (set to 3 by default for new users). To log in to the logbook, the users will have to enter their email address and password. The entered password will be hashed and compared to the one in the database. If the passwords match, the user will be allowed to login.
+
+
 
 ------------------------------------------------------------
 
