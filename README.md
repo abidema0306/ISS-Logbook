@@ -15,7 +15,7 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2.
 ## 1.3 Threats
 
 In the design document, a few threats were identified applicable to the logbook. These threats included taking over an existing user’s account and upgrading a lesser privileged account to one with more privileges.
-For this reason, a program was written in Python (Downey, 2009), which enforces strong password practices, applies cryptographic hashing functions to protect this privileged data, locks the user accounts after too many incorrect login attempts, and separates user data from the more privileged staff data. The password must contain special characters, numbers and upper-case letters. The code will also require users to confirm their password to help them catch any typos. Passwords which meet all the requirements will then be hashed using the SHA-256 cryptographic hashing method and stored in the csv file together with the user’s email address, registration date and the number of login attempts (set to 3 by default for new users). To log in to the logbook, the users will have to enter their email address and password. The entered password will be hashed and compared to the one in the database. If the passwords match, the user will be allowed to login.
+For this reason, a program was written in Python (Downey, 2012), which enforces strong password practices, applies cryptographic hashing functions to protect this privileged data, locks the user accounts after too many incorrect login attempts, and separates user data from the more privileged staff data. The password must contain special characters, numbers and upper-case letters. The code will also require users to confirm their password to help them catch any typos. Passwords which meet all the requirements will then be hashed using the SHA-256 cryptographic hashing method and stored in the csv file together with the user’s email address, registration date and the number of login attempts (set to 3 by default for new users). To log in to the logbook, the users will have to enter their email address and password. The entered password will be hashed and compared to the one in the database. If the passwords match, the user will be allowed to login.
 
 
 
@@ -24,7 +24,7 @@ For this reason, a program was written in Python (Downey, 2009), which enforces 
 ## 2 Passwords: hashing and salting
         
 The program enforces the following password restrictions:             
-The password length must be between 8 and 64 characters. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (PythonPool, 2021).
+The password length must be between 8 and 64 characters. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021)
 The password must contain special characters, numbers and upper-case letters.
 The password must contain at least one whitespace. Passwords with white spaces tend to be more secure (InfosecMatter, 2021).
 
@@ -117,6 +117,12 @@ Simplilearn.com. (2021) Understanding Why is the Password Validation Process Imp
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
 
 OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
+
+Downey, A.B. (2012). Python for software design how to think like a computer scientist. Cambridge: Cambridge University Press.   (Samuel entry)
+
+Khan, M.W. (2021). Pool Map With Multiple Arguments in Python. [online] Delft Stack. Available at: https://www.delftstack.com/howto/python/python-pool-map-multiple-arguments/ [Accessed 9 Sep. 2022].   (Samuel entry)
+‌
+‌
 ‌
 ‌
 
