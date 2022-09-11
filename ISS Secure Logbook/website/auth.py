@@ -1,9 +1,11 @@
 #session is a flask extension used to support the server-side application for login attempts
 from flask import Blueprint, render_template, request, flash, redirect, url_for, session, app
 from .models import User
+# This security library implments secure authication visa hashing and salting.
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_user, login_required, logout_user, current_user
+#Timedelta function to calculate attempts
 from datetime import timedelta
     
 auth = Blueprint('auth', __name__)
@@ -14,6 +16,7 @@ max_attempts = 3
 @auth.route('/login', methods=['GET', 'POST'])
 
 def login():
+    #These conditions monitor password attempts upto 3 tries. Warnings are flashed on each attempt.
     if not session.get('attempt'):
         session['attempt'] = 1
         flash('Setting attempt to 1!', category='success')
@@ -28,13 +31,13 @@ def login():
         if user:
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
-                session['attempt'] = 1
+                session['attempt'] = 1 # First attempt matched against hashed password.
                 login_user(user, remember=True)
                 return redirect(url_for('views.home'))
         
             else:
                 session['attempt'] = session['attempt'] + 1
-                if session['attempt'] > max_attempts:
+                if session['attempt'] > max_attempts: # Third failed attempt send user to an error page.
                     return render_template('errorpage.html', user=current_user)
                 else:
                     flash('Incorrect password, try again. ' + str(max_attempts + 1 - session['attempt']) + ' attempts remaining.', category='error')
@@ -50,7 +53,7 @@ def logout():
     logout_user()
     return redirect(url_for('auth.login'))
 
-
+# Special characters for password complexity.
 SpecialSym =['$', '@', '#', '%']
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
@@ -61,6 +64,7 @@ def sign_up():
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
+        # Below are conditions for satisfying password requirements of length and complexity. 
         user = User.query.filter_by(email=email).first()
         if user:
             flash('Email already exists.', category='error')
@@ -84,6 +88,8 @@ def sign_up():
             
       
         else:
+            #Once password requirements have been met, the password is added to database hashed and salted
+            # according to sha256 hashing function
             new_user = User(email=email, first_name=first_name, password=generate_password_hash(
                 password1, method='sha256'))
             db.session.add(new_user)
