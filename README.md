@@ -31,11 +31,11 @@ The password must contain at least one whitespace. Passwords with white spaces t
 
 --------------------------------------------------------------
 
-## 3 Logbook Username, Password, notes database
+## 3 Logbook Username, Password, Notes database
 
 -------------------------------------------------------------
 
-## 4 Dependenices
+## 4 Dependencies
 
 -----------------------------------------------------------
 
