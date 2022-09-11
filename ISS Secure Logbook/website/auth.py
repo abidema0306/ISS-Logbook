@@ -1,3 +1,4 @@
+#session is a flask extension used to support the server-side application for login attempts
 from flask import Blueprint, render_template, request, flash, redirect, url_for, session, app
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -6,6 +7,8 @@ from flask_login import login_user, login_required, logout_user, current_user
 from datetime import timedelta
     
 auth = Blueprint('auth', __name__)
+
+#This is the maximum attempts for password attempts; it can be changed.
 max_attempts = 3
 
 @auth.route('/login', methods=['GET', 'POST'])
