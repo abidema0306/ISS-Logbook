@@ -1,29 +1,40 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash, redirect, url_for, session, app
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_user, login_required, logout_user, current_user
-
-
-
+from datetime import timedelta
+    
 auth = Blueprint('auth', __name__)
+max_attempts = 3
 
 @auth.route('/login', methods=['GET', 'POST'])
 
-
-
 def login():
+    if not session.get('attempt'):
+        session['attempt'] = 1
+        flash('Setting attempt to 1!', category='success')
+    if session['attempt'] > max_attempts:
+        return render_template('errorpage.html', user=current_user)
+        
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        count=0
-        
         user = User.query.filter_by(email=email).first()
+
         if user:
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
+                session['attempt'] = 1
                 login_user(user, remember=True)
                 return redirect(url_for('views.home'))
+        
+            else:
+                session['attempt'] = session['attempt'] + 1
+                if session['attempt'] > max_attempts:
+                    return render_template('errorpage.html', user=current_user)
+                else:
+                    flash('Incorrect password, try again. ' + str(max_attempts + 1 - session['attempt']) + ' attempts remaining.', category='error')
         else:
             flash('Email does not exist.', category='error')
    
@@ -50,8 +61,8 @@ def sign_up():
         user = User.query.filter_by(email=email).first()
         if user:
             flash('Email already exists.', category='error')
-        elif len(email) < 10:
-            flash('Email must be greater than 10 characters.', category='error')
+        elif len(email) < 4:
+            flash('Email must be greater than 3 characters.', category='error')
         elif len(first_name) < 3:
             flash('First name must be greater than 1 character.', category='error')
         elif password1 != password2:
@@ -79,3 +90,4 @@ def sign_up():
             return redirect(url_for('views.home'))
             
     return render_template("sign_up.html", user=current_user)
+
