@@ -114,15 +114,16 @@ Password validation should have many paramaters which included complexity, lengt
 ## 10 References
 
 Ashmore, J. Adelakun, A. Tolofari, S. (2022) 'Development Team Project: Design Document'. Paper submitted to the university of the University of Essex Online for Secure Software Development Module.
+
 Simplilearn.com. (2021) Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. Available from: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
 
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
 
 OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
 
-Downey, A.B. (2012). Python for software design how to think like a computer scientist. Cambridge: Cambridge University Press.   (Samuel entry)
+Downey, A.B. (2012) Python for software design how to think like a computer scientist. Cambridge: Cambridge University Press.   (Samuel entry)
 
-Khan, M.W. (2021). Pool Map With Multiple Arguments in Python. [online] Delft Stack. Available at: https://www.delftstack.com/howto/python/python-pool-map-multiple-arguments/ [Accessed 9 Sep. 2022].   (Samuel entry)
+Khan, M.W. (2021) Pool Map With Multiple Arguments in Python. Delft Stack. Available from: https://www.delftstack.com/howto/python/python-pool-map-multiple-arguments/ [Accessed 9 Sep. 2022].   (Samuel entry)
 ‌
 ‌
 ‌
