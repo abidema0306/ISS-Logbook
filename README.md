@@ -107,11 +107,12 @@ Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
 
 Bandit is security analysis tool for scanning source code in Python. It will produce a report based any vulnerabilities such as plain text passwords in the code. Ngetich (2021). 
 
-Install Bandit on Windows 10:
+Install Bandit on Windows 10:<br>
 `pip install bandit`
+<br>
+Run Bandit: <br>
+`bandit -r auth.py`
 
-Run Bandit
-`bandit auth.py'
 -------------------------------------------------------------
 
 # 8 Testing
