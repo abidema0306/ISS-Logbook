@@ -98,7 +98,10 @@ Password validation should have many paramaters which included complexity, lengt
 
 ## 7.2 Pylint
 
-## 7.3 McCabe (Cyclomatic Compplexity)
+## 7.3 McCabe (Cyclomatic Complexity)
+This tool measures the number of decisions such as 'if' conditionals in the source code; for example, the lower count, the less complex it is.
+Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
+
 
 ## 7.4 Bandit
 
@@ -118,6 +121,9 @@ Ashmore, J. Adelakun, A. Tolofari, S. (2022) 'Development Team Project: Design D
 Simplilearn.com. (2021) Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. Available from: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
 
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
+
+Qac, H. (2022) Cyclomatic Complexity Explained | Perforce. Available from: https://www.perforce.com/video-tutorials/qac/cyclomatic-complexity-explained#:~:text=Code%20with%20a%20cyclomatic%20complexity%20between%201%20and [Accessed 12 Sep. 2022].
+‌
 
 OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
 
