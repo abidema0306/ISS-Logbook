@@ -102,7 +102,7 @@ Password validation should have many paramaters which included complexity, lengt
 This tool measures the number of decisions such as 'if' conditionals in the source code; for example, the lower count, the less complex it is.
 Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
 
-install mccabe:
+Install mccabe:
 `pip install mccabe`<br>
 
 Run mccabe:
