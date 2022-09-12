@@ -107,14 +107,14 @@ Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
 
 -------------------------------------------------------------
 
-## 8 Testing
+# 8 Testing
 
 ------------------------------------------------------------
-## 9 Limitations
+# 9 Limitations
  
  ----------------------------------------------------------------
 
-## 10 References
+# 10 References
 
 Ashmore, J. Adelakun, A. Tolofari, S. (2022) 'Development Team Project: Design Document'. Paper submitted to the university of the University of Essex Online for Secure Software Development Module.
 
