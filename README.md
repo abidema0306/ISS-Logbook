@@ -21,21 +21,12 @@ For this reason, a program was written in Python (Downey, 2012), which enforces 
 
 ------------------------------------------------------------
 
-# 2 Passwords: hashing and salting
-        
-The program enforces the following password restrictions:             
-The password length must be between 8 and 64 characters. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021)
-The password must contain special characters, numbers and upper-case letters.
-The password must contain at least one whitespace. Passwords with white spaces tend to be more secure (InfosecMatter, 2021).
 
-
---------------------------------------------------------------
-
-# 3 Logbook Username, Password, Notes database
+# 2 Logbook Username, Password, Notes database
 
 -------------------------------------------------------------
 
-# 4 Dependencies
+# 3 Dependencies
 
 The main modules:
 
@@ -50,21 +41,21 @@ Sqlite3 3.39.2
 
 -----------------------------------------------------------
 
-# 5 Authentication Module
+# 4 Authentication Module
 ------------------------------------------------------------
 
-## 5.1 Registration
+## 4.1 Registration
 
-## 5.2 Login
+## 4.2 Login
 
-## 5.3 Notes
+## 4.3 Notes
 
 ---------------------------------------------------------------
-# 6 Security Functions
+# 5 Security Functions
 
-## 6.1 Password Validation
+## 5.1 Password Validation
 
-Password validation should have many paramaters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created. Below are examples taken from the Logbook app. 
+Password validation should have many paramaters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created The password must contain at least one whitespace. Futhermore, The password length must be between 8 and 64 characters, and passwords with white spaces tend to be more secure (InfosecMatter, 2021). Below are examples taken from the Logbook app. 
 
 1.`if user:
             flash('Email already exists.', category='error')`
@@ -97,17 +88,21 @@ Password validation should have many paramaters which included complexity, lengt
             
 
 
-## 6.2 Multifactor Authentication
+## 5.2 Multifactor Authentication
 
-## 6.3 Captcha
+## 5.3 Captcha
+
+## 5.4 Password Hash and salt
+
+The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021
 
 -------------------------------------------------------------
 
-# 7 Linters
+# 6 Linters
 Linting referes to tools that can be dowloaded to analyse source code for bugs, stylistics erros, and programming errors. Below are four types: pylint and 
 flake8 examine stylistic errors, mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
 
-## 7.1 Flake8
+## 6.1 Flake8
 Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, prventing bad formatting and styling (GitHub, 2022).
 
 Install Flake8:
@@ -116,7 +111,7 @@ Install Flake8:
 Run Flake8:
 `flake8 auth.py`
 
-## 7.2 Pylint
+## 6.2 Pylint
 Smiliar to Flake8, this Python module looks for code smells, lists errors, and recommendation corrections (Rjmolyneaux, 2022).
 
 Install mccabe:
@@ -125,7 +120,7 @@ Install mccabe:
 Run mccabe:
 `python -m pylint auth.py`
 
-## 7.3 McCabe (Cyclomatic Complexity)
+## 6.3 McCabe (Cyclomatic Complexity)
 This tool measures the number of decisions such as 'if' conditionals in the source code; for example, the lower count, the less complex it is.
 Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
 
@@ -135,7 +130,7 @@ Install Mccabe:
 Run Mccabe:
 `python -m mccabe auth.py`
 
-## 7.4 Bandit
+## 6.4 Bandit
 
 Bandit is security analysis tool for scanning source code in Python. It will produce a report based any vulnerabilities such as plain text passwords in the code. Ngetich (2021). 
 
@@ -147,14 +142,14 @@ Run Bandit:
 
 -------------------------------------------------------------
 
-# 8 Testing
+# 7 Testing
 
 ------------------------------------------------------------
-# 9 Limitations
+# 8 Limitations
  
  ----------------------------------------------------------------
 
-# 10 References
+# 9 References
 
 Ashmore, J. Adelakun, A. Tolofari, S. (2022) 'Development Team Project: Design Document'. Paper submitted to the university of the University of Essex Online for Secure Software Development Module.
 
