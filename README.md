@@ -93,8 +93,7 @@ Password validation should have many paramaters which included complexity, lengt
 ## 5.3 Captcha
 
 ## 5.4 Password Hash and salt
-
-The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021
+The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
 
 -------------------------------------------------------------
 
@@ -103,7 +102,7 @@ Linting referes to tools that can be dowloaded to analyse source code for bugs, 
 flake8 examine stylistic errors, mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
 
 ## 6.1 Flake8
-Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, prventing bad formatting and styling (GitHub, 2022).
+Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, preventing bad formatting and styling (GitHub, 2022).
 
 Install Flake8:
 `pip install flake8`
@@ -164,6 +163,9 @@ Rjmolyneaux (2022) Use PyLint for Python code - Visual Studio (Windows). docs.mi
 ‌
 
 Simplilearn.com. (2021) Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. Available from: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
+
+Techmonger (2022) Secure Passwords in Python With Werkzeug - Tech Monger. Available from: https://techmonger.github.io/4/secure-passwords-werkzeug/ [Accessed 13 Sep. 2022].
+‌
 
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
 
