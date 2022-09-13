@@ -10,13 +10,14 @@ from datetime import timedelta
     
 auth = Blueprint('auth', __name__)
 
-#This is the maximum attempts for password attempts; it can be changed.
+# This is the maximum attempts for password attempts; it can be changed.
 max_attempts = 3
 
 @auth.route('/login', methods=['GET', 'POST'])
 
 def login():
-    #These conditions monitor password attempts upto 3 tries. Warnings are flashed on each attempt.
+    # These conditions monitor password attempts upto 3 tries. 
+    # Warnings are flashed on each attempt.
     if not session.get('attempt'):
         session['attempt'] = 1
         flash('Setting attempt to 1!', category='success')
@@ -38,7 +39,7 @@ def login():
             else:
                 session['attempt'] = session['attempt'] + 1
                 if session['attempt'] > max_attempts: # Third failed attempt send user to an error page.
-                    return render_template('errorpage.html', user=current_user)
+                    return render_template('login.html', user=current_user)
                 else:
                     flash('Incorrect password, try again. ' + str(max_attempts + 1 - session['attempt']) + ' attempts remaining.', category='error')
         else:
