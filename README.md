@@ -37,7 +37,9 @@ Werkzeug 2.2.2
 Sqlalchemy 1.4.41
 Sqlite3 3.39.2
 ```
+For a full list of library dependencies:
 
+`pip install -r requirements.txt`
 
 -----------------------------------------------------------
 
@@ -95,6 +97,9 @@ Password validation should have many paramaters which included complexity, lengt
 ## 5.4 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
 
+An example of a hashed and salted password of a new user.
+
+![hashed password](https://github.com/JonnyAsh/ISS-Logbook/blob/e1522dd1fdad4fb911248224da8844a0f244d38e/ISS%20Secure%20Logbook/website/images/user%20example.png)<br> <br/>
 -------------------------------------------------------------
 
 # 6 Linters
