@@ -16,7 +16,7 @@ max_attempts = 3
 @auth.route('/login', methods=['GET', 'POST'])
 
 def login():
-    # These conditions monitor password attempts upto 3 tries. 
+    # These conditions monitor password attempts for 3 tries. 
     # Warnings are flashed on each attempt.
     if not session.get('attempt'):
         session['attempt'] = 1
