@@ -37,6 +37,15 @@ The password must contain at least one whitespace. Passwords with white spaces t
 
 # 4 Dependencies
 
+The main modules:
+
+```
+python 3.10.3
+Flask 2.2.2
+Werkzeug 2.2.2
+```
+
+
 -----------------------------------------------------------
 
 # 5 Authentication Module
