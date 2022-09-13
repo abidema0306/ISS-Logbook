@@ -15,7 +15,7 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2.
 ## 1.3 Threats
 
 In the design document, a few threats were identified applicable to the logbook. These threats included taking over an existing user’s account and upgrading a lesser privileged account to one with more privileges.
-For this reason, a program was written in Python (Downey, 2012), which enforces strong password practices, applies cryptographic hashing functions to protect this privileged data, locks the user accounts after too many incorrect login attempts, and separates user data from the more privileged staff data. The password must contain special characters, numbers and upper-case letters. The code will also require users to confirm their password to help them catch any typos. Passwords which meet all the requirements will then be hashed using the SHA-256 cryptographic hashing method and stored in the csv file together with the user’s email address, registration date and the number of login attempts (set to 3 by default for new users). To log in to the logbook, the users will have to enter their email address and password. The entered password will be hashed and compared to the one in the database. If the passwords match, the user will be allowed to login.
+For this reason, a program was written in Python (Downey, 2012), which enforces strong password practices, applies cryptographic hashing functions to protect this privileged data, locks the user accounts after too many incorrect login attempts, and separates user data from the more privileged staff data. The password must contain special characters, numbers and upper-case letters. The code will also require users to confirm their password to help them catch any typos. Passwords which meet all the requirements will then be hashed using the SHA-256 cryptographic hashing method and stored in the csv file together with the user’s email address, registration date and the number of login attempts (set to 3 by default for new users) mitigating brute-force attacks. To log in to the logbook, the users will have to enter their email address and password. The entered password will be hashed and compared to the one in the database. If the passwords match, the user will be allowed to login.
 
 
 
@@ -55,7 +55,7 @@ For a full list of library dependencies:
 ---------------------------------------------------------------
 # 5 Security Functions
 
-## 5.1 Password Validation
+## 5.1 Password Validation for signup
 
 Password validation should have many paramaters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created The password must contain at least one whitespace. Futhermore, The password length must be between 8 and 64 characters, and passwords with white spaces tend to be more secure (InfosecMatter, 2021). Below are examples taken from the Logbook app. 
 
@@ -88,13 +88,62 @@ Password validation should have many paramaters which included complexity, lengt
             flash('Password should have at least one of the symbols $@#', category='error')`
             ![symbol](https://github.com/JonnyAsh/ISS-Logbook/blob/a8e696ae2ca9295b103387f4c6265b1bade1c87c/ISS%20Secure%20Logbook/website/images/symbol.png)<br><br/>
             
+## 5.2 Password validation for login
+One method to increase security is to have a lock-out policy of 3 attempts resulting in a 1-minute lock-out.
 
 
-## 5.2 Multifactor Authentication
+```
+__init__.py
+    # session lifetime set to 1 minute; not IP specific
+    @app.before_request
+    def make_session_permanent():
+        session.permanent = True
+        app.permanent_session_lifetime = timedelta(minutes=1)
+        session.modified = True
+        
 
-## 5.3 Captcha
+auth.py
+def login():
+    # These conditions monitor password attempts for 3 tries. 
+    # Warnings are flashed on each attempt.
+    if not session.get('attempt'):
+        session['attempt'] = 1
+        flash('Setting attempt to 1!', category='success')
+    if session['attempt'] > max_attempts:
+        return render_template('errorpage.html', user=current_user)
+        
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+        user = User.query.filter_by(email=email).first()
 
-## 5.4 Password Hash and salt
+        if user:
+            if check_password_hash(user.password, password):
+                flash('Logged in successfully!', category='success')
+                session['attempt'] = 1 # First attempt matched against hashed password.
+                login_user(user, remember=True)
+                return redirect(url_for('views.home'))
+        
+            else:
+                session['attempt'] = session['attempt'] + 1
+                if session['attempt'] > max_attempts: # Third failed attempt sends user to an error page.
+                    return render_template('login.html', user=current_user)
+                else:
+                    flash('Incorrect password, try again. ' + str(max_attempts + 1 - session['attempt']) + ' attempts remaining.', category='error')
+        else:
+            flash('Email does not exist.', category='error')
+   
+    return render_template("login.html", user=current_user
+
+
+```
+
+
+## 5.3 Multifactor Authentication
+
+## 5.4 Captcha
+
+## 5.5 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
 
 An example of a hashed and salted password of a new user.
