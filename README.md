@@ -55,7 +55,7 @@ For a full list of library dependencies:
 ---------------------------------------------------------------
 # 5 Security Functions
 
-## 5.1 Password Validation
+## 5.1 Password Validation for signup
 
 Password validation should have many paramaters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created The password must contain at least one whitespace. Futhermore, The password length must be between 8 and 64 characters, and passwords with white spaces tend to be more secure (InfosecMatter, 2021). Below are examples taken from the Logbook app. 
 
@@ -88,13 +88,14 @@ Password validation should have many paramaters which included complexity, lengt
             flash('Password should have at least one of the symbols $@#', category='error')`
             ![symbol](https://github.com/JonnyAsh/ISS-Logbook/blob/a8e696ae2ca9295b103387f4c6265b1bade1c87c/ISS%20Secure%20Logbook/website/images/symbol.png)<br><br/>
             
+## 5.2 Password validation for login
 
 
-## 5.2 Multifactor Authentication
+## 5.3 Multifactor Authentication
 
-## 5.3 Captcha
+## 5.4 Captcha
 
-## 5.4 Password Hash and salt
+## 5.5 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
 
 An example of a hashed and salted password of a new user.
