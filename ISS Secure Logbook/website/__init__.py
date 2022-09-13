@@ -13,6 +13,7 @@ def create_app():
     app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
 
+    # session lifetime set to 1 minute; not IP specific
     @app.before_request
     def make_session_permanent():
         session.permanent = True

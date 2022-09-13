@@ -38,7 +38,7 @@ def login():
         
             else:
                 session['attempt'] = session['attempt'] + 1
-                if session['attempt'] > max_attempts: # Third failed attempt send user to an error page.
+                if session['attempt'] > max_attempts: # Third failed attempt sends user to an error page.
                     return render_template('login.html', user=current_user)
                 else:
                     flash('Incorrect password, try again. ' + str(max_attempts + 1 - session['attempt']) + ' attempts remaining.', category='error')
