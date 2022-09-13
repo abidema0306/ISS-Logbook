@@ -40,7 +40,7 @@ The password must contain at least one whitespace. Passwords with white spaces t
 The main modules:
 
 ```
-python 3.10.3
+python 3.10.6
 Flask 2.2.2
 Werkzeug 2.2.2
 ```
