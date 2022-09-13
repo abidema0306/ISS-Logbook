@@ -151,10 +151,12 @@ Downey, A.B. (2012) Python for software design how to think like a computer scie
 
 GitHub. (2022) PyCQA/flake8. Available from: https://github.com/pycqa/flake8 [Accessed 13 Sep. 2022].
 ‌
+
 Khan, M.W. (2021) Pool Map With Multiple Arguments in Python. Delft Stack. Available from: https://www.delftstack.com/howto/python/python-pool-map-multiple-arguments/ [Accessed 9 Sep. 2022].   (Samuel entry)
 
 Rjmolyneaux (2022) Use PyLint for Python code - Visual Studio (Windows). docs.microsoft.com. Available from: https://docs.microsoft.com/en-us/visualstudio/python/linting-python-code?view=vs-2022 [Accessed 13 Sep. 2022].
 ‌
+
 Simplilearn.com. (2021) Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. Available from: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
 
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
