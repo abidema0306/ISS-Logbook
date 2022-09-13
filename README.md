@@ -93,14 +93,16 @@ Password validation should have many paramaters which included complexity, lengt
 -------------------------------------------------------------
 
 # 7 Linters
+Linting referes to tools that can be dowloaded to analyse source code for bugs, stylistics erros, and programming errors. Below are four types: pylint and 
+flake8 examine stylistic errors, mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
 
 ## 7.1 Flake8
 Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, prventing bad formatting and styling (GitHub, 2022).
 
-Install Flake8
+Install Flake8:
 `pip install flake8`
 
-Run Flake8
+Run Flake8:
 `flake8 auth.py`
 
 ## 7.2 Pylint
@@ -115,14 +117,12 @@ Run mccabe:
 ## 7.3 McCabe (Cyclomatic Complexity)
 This tool measures the number of decisions such as 'if' conditionals in the source code; for example, the lower count, the less complex it is.
 Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
-
-`
-
+ whch
 ## 7.4 Bandit
 
 Bandit is security analysis tool for scanning source code in Python. It will produce a report based any vulnerabilities such as plain text passwords in the code. Ngetich (2021). 
 
-Install Bandit on Windows 10:
+Install Bandit:
 `pip install bandit`<br>
 
 Run Bandit: 
