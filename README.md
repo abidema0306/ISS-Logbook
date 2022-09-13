@@ -117,7 +117,13 @@ Run mccabe:
 ## 7.3 McCabe (Cyclomatic Complexity)
 This tool measures the number of decisions such as 'if' conditionals in the source code; for example, the lower count, the less complex it is.
 Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
- whch
+
+Install Mccabe:
+`pip install mccabe`
+
+Run Mccabe:
+`python -m mccabe auth.py`
+
 ## 7.4 Bandit
 
 Bandit is security analysis tool for scanning source code in Python. It will produce a report based any vulnerabilities such as plain text passwords in the code. Ngetich (2021). 
