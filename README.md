@@ -112,11 +112,11 @@ Run mccabe:
 
 Bandit is security analysis tool for scanning source code in Python. It will produce a report based any vulnerabilities such as plain text passwords in the code. Ngetich (2021). 
 
-Install Bandit on Windows 10:<br>
-`pip install bandit`
-<br>
-Run Bandit: <br>
-`bandit -r auth.py`
+Install Bandit on Windows 10:
+`pip install bandit`<br>
+
+Run Bandit: 
+`bandit -r auth.py`<br>
 
 -------------------------------------------------------------
 
