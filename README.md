@@ -146,13 +146,5 @@ Ngetich, A. (2021) How to scan Python Code for Vulnerabilities using Bandit. Hac
 ‌
 OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
 
-Downey, A.B. (2012) Python for software design how to think like a computer scientist. Cambridge: Cambridge University Press.   (Samuel entry)
-
-Khan, M.W. (2021) Pool Map With Multiple Arguments in Python. Delft Stack. Available from: https://www.delftstack.com/howto/python/python-pool-map-multiple-arguments/ [Accessed 9 Sep. 2022].   (Samuel entry)
-‌
-‌
-‌
-‌
-
 
 
