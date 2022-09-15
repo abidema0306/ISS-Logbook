@@ -142,6 +142,38 @@ def login():
 ## 5.3 Multifactor Authentication
 
 ## 5.4 Captcha
+As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. Captcha is used to prevent bots from accessing web applications or websites (Thangavelu et al, 2014). The Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha.
+
+auth.py
+
+  if user:
+            if check_password_hash(user.password, password):
+                session['attempt'] = 1 # First attempt matched against hashed password.
+                if password:
+                   if is_human(captcha_response):
+                        login_user(user, remember=True)
+                        return redirect(url_for('views.home'))
+                   else:
+                     flash('Bots are not allowed!', category= 'error') 
+   
+   def is_human(captcha_response):
+        secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D'
+        payload = {'response':captcha_response, 'secret':secret}
+        response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
+        response_text = json.loads(response.text)
+        return response_text['success']
+
+
+![image](https://user-images.githubusercontent.com/94033113/190220850-aff589bd-78b5-49fc-9e16-14d632743ad4.png)
+
+
+An example showing the working 
+![image](https://user-images.githubusercontent.com/94033113/190221025-98e9b32c-7c77-40c1-a900-0e0b172b0953.png)
+
+An example showing the user trying to log in without enabling the captcha.
+![image](https://user-images.githubusercontent.com/94033113/190248691-dc4d200a-75c6-4fe3-bf36-48f49db9bd1f.png)
+
+
 
 ## 5.5 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
@@ -219,10 +251,13 @@ Rjmolyneaux (2022) Use PyLint for Python code - Visual Studio (Windows). docs.mi
 Simplilearn.com. (2021) Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. Available from: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
 
 Techmonger (2022) Secure Passwords in Python With Werkzeug - Tech Monger. Available from: https://techmonger.github.io/4/secure-passwords-werkzeug/ [Accessed 13 Sep. 2022].
-‌
+
+Techmonger (2022) How to add ReCaptcha to Flask App without Extension - Tech Monger. Available from: https://techmonger.github.io/5/python-flask-recaptcha/ [Accessed 9 Sept 2022].
 
 TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the note storing flask web app made during a YouTube video. GitHub. Available from: https://github.com/techwithtim/Flask-Web-App-Tutorial [Accessed 9 Aug. 2022].
 
+Thangavelu, S. Purusothaman, T. & Gowrison, G. (2014) Analysis of Captcha Security Methods in Web Applications. Available from http://ijcttjournal.org/Volume9/number-8/IJCTT-V9P175.pdf [Accessed 14 Sept 2022]
+‌
 Qac, H. (2022) Cyclomatic Complexity Explained | Perforce. Available from: https://www.perforce.com/video-tutorials/qac/cyclomatic-complexity-explained#:~:text=Code%20with%20a%20cyclomatic%20complexity%20between%201%20and [Accessed 12 Sep. 2022].
 
 Ngetich, A. (2021) How to scan Python Code for Vulnerabilities using Bandit. HacWare Resources. Available from: https://resources.hacware.com/bandit-security-scan-for-python-code/ [Accessed 12 Sep. 2022].
